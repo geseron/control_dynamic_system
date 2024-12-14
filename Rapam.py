@@ -55,7 +55,6 @@ random_state = 10
 
 def normal_DE( x, y ):  # правая часть дифура в нормальной форме y'=f(x,y)
     return - y + u_one(x)
-    return (y*( x + y )/( x**2 ))
  
 # находим решение с шагом h с начальными условиями y(x0)=y0
 # x - конец отрезка
@@ -164,9 +163,11 @@ def r():
     ax.plot(data_sample['t'], data_sample['w_estimate'], '--', c='red')
 
     ax.set_xlim(0,3)
-    ax.set_ylim(-50,50)
+    # ax.set_ylim(-15,40)
+    ax.set_ylim(-10,5)
     plt.legend()
     plt.grid()
     plt.show()
+    return w
 
 r()
